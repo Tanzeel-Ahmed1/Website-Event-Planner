@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - EventPlanner</title>
+  <link rel="stylesheet" href="loginsignup.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-form">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit" class="btn green">Create Account</button>
+      </form>
+      <div class="register-box">
+        <p>Already have an account?</p>
+        <button onclick="window.location.href='login.html'" class="btn gray">Log in</button>
+      </div>
+    </div>
+    <div class="login-banner">
+      <h1>eventplanner</h1>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+
+      // Save user data in localStorage
+      localStorage.setItem("name", name);
+      localStorage.setItem("email", email);
+      localStorage.setItem("password", password);
+
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>

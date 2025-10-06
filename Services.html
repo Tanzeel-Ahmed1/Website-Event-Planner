@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Ethereal Events</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="event.css">
+</head>
+<body>
+
+ 
+     <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-glass-cheers"></i>
+                <span>EVENT PLANNER</span>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="event.html">HOME</a></li>
+                    <li><a href="About 2.html">ABOUT US</a></li>
+                      <li class="dropdown">
+                        <a href="#">EVENTS <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="Weddings.html" onclick="showEventModal('Wedding & Engagements')">Wedding & Engagements</a>
+                            <a href="Corporate.html" onclick="showEventModal('Corporate & Galas')">Corporate </a>
+                            <a href="Privateparties.html" onclick="showEventModal('Private Parties')">Private Parties</a>
+                        </div>
+                    </li>
+                    <li><a href="Services.html">SERVICES</a></li>
+                    <li><a href="gallery.html">GALLARY</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+  <section class="hero" data-aos="fade-in">
+    <h1>Our Exclusive Services</h1>
+    <p>From intimate engagements to grand weddings – we craft moments you’ll cherish forever.</p>
+  </section>
+
+ <!-- Services Section -->
+  <section class="section container" data-aos="fade-up">
+    <h2 class="section-title">What We Offer</h2>
+    <div class="services-grid">
+      <div class="service-card" data-aos="zoom-in" onclick="openModal('engagement')">
+        <i class="fas fa-ring"></i>
+        <h3>Engagement Planning</h3>
+        <p>Beautiful beginnings for your journey.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100" onclick="openModal('wedding')">
+        <i class="fas fa-church"></i>
+        <h3>Wedding Ceremony</h3>
+        <p>Perfectly curated dream day.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200" onclick="openModal('reception')">
+        <i class="fas fa-glass-cheers"></i>
+        <h3>Receptions</h3>
+        <p>Celebrate love with elegance.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="300" onclick="openModal('entertainment')">
+        <i class="fas fa-music"></i>
+        <h3>Entertainment</h3>
+        <p>Music & performances for guests.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div id="engagement" class="modal">
+    <div class="modal-content" data-aos="zoom-in">
+      <div class="modal-header"><h2>Engagement Planning</h2></div>
+      <div class="modal-body">
+        <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg" alt="Engagement">
+        <p>We design heartfelt proposals, stunning engagement parties, and manage every detail – from décor to guest experience.</p>
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeModal('engagement')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="wedding" class="modal">
+    <div class="modal-content" data-aos="zoom-in">
+      <div class="modal-header"><h2>Wedding Ceremony</h2></div>
+      <div class="modal-body">
+        <img src="https://images.pexels.com/photos/256737/pexels-photo-256737.jpeg" alt="Wedding">
+        <p>From traditional vows to modern themes, our wedding planning covers décor, rituals, and a seamless flow of your dream day.</p>
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeModal('wedding')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="reception" class="modal">
+    <div class="modal-content" data-aos="zoom-in">
+      <div class="modal-header"><h2>Receptions</h2></div>
+      <div class="modal-body">
+        <img src="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg" alt="Reception">
+        <p>Our reception services blend music, food, and décor – giving you and your guests an unforgettable celebration.</p>
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeModal('reception')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="entertainment" class="modal">
+    <div class="modal-content" data-aos="zoom-in">
+      <div class="modal-header"><h2>Entertainment</h2></div>
+      <div class="modal-body">
+        <img src="https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg" alt="Entertainment">
+        <p>From live bands to DJs and cultural acts – we create unforgettable entertainment experiences tailored to your event.</p>
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeModal('entertainment')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages Section -->
+  <section class="section" data-aos="fade-up">
+    <h2 class="section-title">Our Packages</h2>
+    <div class="packages">
+      <div class="package-card" data-aos="flip-left">
+        <h3>Silver Package</h3>
+        <div class="price">Starting RS:20000</div>
+        <ul>
+          <li>Engagement Ceremony</li>
+          <li>Basic Decor</li>
+          <li>Photography</li>
+        </ul>
+      </div>
+      <div class="package-card" data-aos="flip-left" data-aos-delay="200">
+        <h3>Gold Package</h3>
+        <div class="price">Starting RS:50000</div>
+        <ul>
+          <li>Engagement + Wedding</li>
+          <li>Decor & Catering</li>
+          <li>Entertainment & Photography</li>
+        </ul>
+      </div>
+      <div class="package-card" data-aos="flip-left" data-aos-delay="400">
+        <h3>Platinum Package</h3>
+        <div class="price">Starting RS:10000</div>
+        <ul>
+          <li>Full Event Planning</li>
+          <li>Luxury Decor & Venue</li>
+          <li>All-Inclusive Services</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section" data-aos="fade-up">
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="why-choose">
+      <div class="why-box" data-aos="fade-right">
+        <i class="fas fa-users"></i>
+        <h3>Experienced Team</h3>
+        <p>Our professional planners bring years of expertise.</p>
+      </div>
+      <div class="why-box" data-aos="fade-up">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Creative Ideas</h3>
+        <p>Unique and modern concepts for unforgettable events.</p>
+      </div>
+      <div class="why-box" data-aos="fade-left">
+        <i class="fas fa-hand-holding-heart"></i>
+        <h3>Stress-Free Planning</h3>
+        <p>We handle everything so you enjoy every moment.</p>
+      </div>
+      <div class="why-box" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-dollar-sign"></i>
+        <h3>Affordable Packages</h3>
+        <p>High-quality services tailored to fit your budget.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section cta" data-aos="zoom-in">
+    <h2>Plan Your Dream Wedding With Us</h2>
+    <p>Contact our team today and let’s bring your vision to life.</p>
+    <button><a href="#">Contact Us</a></button>
+  </section>
+
+   <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>EVENT PLANNER is a professional event management company dedicated to creating memorable experiences for all your special occasions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#" onclick="showEventModal('Wedding & Engagements')">Wedding & Engagements</a></li>
+                        <li><a href="#" onclick="showEventModal('Corporate & Galas')">Corporate & Galas</a></li>
+                        <li><a href="#" onclick="showEventModal('Private Parties')">Private Parties</a></li>
+                        <li><a href="#" onclick="showEventModal('Concerts')">Concerts</a></li>
+                        <li><a href="#" onclick="showEventModal('Cultural Events')">Cultural Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Event Street, City, Country</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@eventplanner.com</li>
+                        <li><i class="fas fa-clock"></i> Mon - Fri: 9AM to 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EVENT PLANNER. All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+    </footer>
+
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
+  <!-- AOS + Modal Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200, once: true });
+
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    window.onclick = function(event) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) modal.style.display = "none";
+      });
+    }
+  </script>
+</body>
+</html>

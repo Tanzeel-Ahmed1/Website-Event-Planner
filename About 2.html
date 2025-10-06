@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Event Planner</title>
+  <link rel="stylesheet" href="event.css" />
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+<!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-glass-cheers"></i>
+                <span>EVENT PLANNER</span>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="event.html">HOME</a></li>
+                    <li><a href="About 2.html">ABOUT US</a></li>
+                      <li class="dropdown">
+                        <a href="#">EVENTS <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="Weddings.html" onclick="showEventModal('Wedding & Engagements')">Wedding & Engagements</a>
+                            <a href="Corporate.html" onclick="showEventModal('Corporate & Galas')">Corporate </a>
+                            <a href="Privateparties.html" onclick="showEventModal('Private Parties')">Private Parties</a>
+                        </div>
+                    </li>
+                    <li><a href="Services.html">SERVICES</a></li>
+                    <li><a href="gallery.html">GALLARY</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+  
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content" data-aos="fade-up">
+            <h1>ABOUT US</h1>
+            <p>Your Vision, Our Expertise - Bringing Dreams to Life</p>
+            <!-- <div class="hero-buttons">
+                <a href="#" class="btn" onclick="showEventModal('Plan Your Event')">Plan Your Event</a>
+                <a href="#portfolio" class="btn btn-secondary">View Our Portfolio</a>
+            </div> -->
+        </div>
+    </section>
+
+ <!-- !-- About Us Section --> 
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Our Story</h2>
+            <p>Creating unforgettable experiences since 2010</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-text" data-aos="fade-right">
+                <h3>Your Vision, Our Expertise</h3>
+                <p>Founded in 2010, EVENT PLANNER has been at the forefront of creating exceptional events that leave lasting impressions. Our journey began with a simple mission: to transform ordinary occasions into extraordinary experiences.</p>
+                <p>With over a decade of experience, we've mastered the art of blending creativity with precision execution. From intimate gatherings to grand celebrations, we approach each event with the same dedication and attention to detail.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Over 500+ successful events</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Customized planning approach</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Dedicated event coordinator</span>
+                    </div>
+                </div>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+            
+            <div class="about-image" data-aos="fade-left">
+                <img src="images/gallery image.png" alt="Our Team">
+            </div>
+        </div>
+        
+        <!-- Statistics Section -->
+        <div class="stats-section" data-aos="fade-up">
+            <div class="stats-container">
+                <div class="stat">
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p>Events Planned</p>
+                </div>
+                <div class="stat">
+                    <h3 class="counter" data-target="12">0</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat">
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Team Members</p>
+                </div>
+                <div class="stat">
+                    <h3 class="counter" data-target="98">0</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Team Section -->
+        <div class="team-section">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Meet Our Team</h2>
+                <p>The passionate professionals behind your perfect event</p>
+            </div>
+            
+            <div class="team-container">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-image">
+                        <img src="images/Farrukh.jpeg" alt="Sarah Johnson">
+                        <!-- <div class="member-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div> -->
+                    </div>
+                    <div class="member-info">
+                        <h4>M.Farrukh</h4>
+                        <p>Founder & CEO</p>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Michael Chen">
+                        <!-- <div class="member-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div> -->
+                    </div>
+                    <div class="member-info">
+                        <h4>Junaid</h4>
+                        <p>Creative Director</p>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-image">
+                        <img src="images/Tanzeel.png" alt="Emily Rodriguez">
+                        <!-- <div class="member-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div> -->
+                    </div>
+                    <div class="member-info">
+                        <h4>Tanzeel</h4>
+                        <p>Operations Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Values Section -->
+        <div class="values-section">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            
+            <div class="values-container">
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4>Creativity</h4>
+                    <p>We believe every event should be unique. Our creative team works tirelessly to bring fresh, innovative ideas to life.</p>
+                </div>
+                
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>Partnership</h4>
+                    <p>We work closely with you as partners, ensuring your vision is realized while offering our expertise every step of the way.</p>
+                </div>
+                
+                <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>Excellence</h4>
+                    <p>From the smallest detail to the grandest element, we strive for perfection in every aspect of event execution.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+// Counter animation for statistics
+document.addEventListener('DOMContentLoaded', function() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the slower
+    
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            
+            // Lower inc to slow and higher to slow
+            const inc = target / speed;
+            
+            // Check if target is reached
+            if (count < target) {
+                // Add inc to count and output in counter
+                counter.innerText = Math.ceil(count + inc);
+                // Call function every ms
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        
+        // Start animation when element is in viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    updateCount();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        
+        observer.observe(counter);
+    });
+});
+</script>
+
+  <!-- Footer -->
+  <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>EVENT PLANNER is a professional event management company dedicated to creating memorable experiences for all your special occasions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="event.html">Home</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="About 2.html">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="Weddings.html" onclick="showEventModal('Wedding & Engagements')">Wedding & Engagements</a></li>
+                        <li><a href="Corporate.html" onclick="showEventModal('Corporate & Galas')">Corporate & Galas</a></li>
+                        <li><a href="Privateparties.html" onclick="showEventModal('Private Parties')">Private Parties</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Event Street, City, Country</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@eventplanner.com</li>
+                        <li><i class="fas fa-clock"></i> Mon - Fri: 9AM to 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EVENT PLANNER. All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+    </footer>
+
+</body>
+</html>

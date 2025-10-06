@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Parties - Ethereal Events</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="event.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fas fa-glass-cheers"></i>
+        <span>EVENT PLANNER</span>
+      </div>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="event.html">HOME</a></li>
+          <li><a href="About 2.html">ABOUT US</a></li>
+          <li class="dropdown">
+            <a href="#">EVENTS <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+              <a href="Weddings.html">Wedding & Engagements</a>
+              <a href="Corporate.html">Corporate & Galas</a>
+              <a href="Privateparties.html">Private Parties</a>
+            </div>
+          </li>
+          <li><a href="Services.html">SERVICES</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero private-hero" data-aos="fade-up">
+    <div class="hero-content">
+      <h1>Private Parties</h1>
+      <p>Celebrate life’s special moments with elegance, style, and unforgettable memories.</p>
+      <a href="#cards" class="btn">Plan Your Party</a>
+    </div>
+  </section>
+
+  <!-- Party Cards -->
+  <section id="cards" class="section" data-aos="fade-up">
+    <h2 class="section-title">Our Private Party Themes</h2>
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <div class="event-card" data-aos="zoom-in">
+        <img src="Assets/Birthday bash.jpg" alt="Birthday Party">
+        <h3>Birthday Bash</h3>
+        <p>Fun-filled birthdays for all ages with themes, decor & entertainment.</p>
+        <button onclick="openModal('birthday')">View Details</button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="event-card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="Assets/Anniversery.jpg" alt="Anniversary">
+        <h3>Anniversary Celebrations</h3>
+        <p>Romantic setups to cherish love and milestones.</p>
+        <button onclick="openModal('anniversary')">View Details</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="event-card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="Assets/pool party.jpg" alt="Pool Party">
+        <h3>Pool Parties</h3>
+        <p>Vibrant poolside fun with music, decor, and cocktails.</p>
+        <button onclick="openModal('pool')">View Details</button>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="event-card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="Assets/private dinners.jpg" alt="Private Dinner">
+        <h3>Private Dinners</h3>
+        <p>Intimate dinners with luxury catering and romantic ambiance.</p>
+        <button onclick="openModal('dinner')">View Details</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div id="birthday" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('birthday')">&times;</span>
+      <img src="Assets/Birthday bash.jpg" alt="Birthday Party">
+      <h2>Birthday Bash</h2>
+      <p>Our birthday party planning includes decor, customized cakes, fun games, and engaging entertainment to make the day truly unforgettable.</p>
+    </div>
+  </div>
+
+  <div id="anniversary" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('anniversary')">&times;</span>
+      <img src="Assets/Anniversery.jpg" alt="Anniversary">
+      <h2>Anniversary Celebrations</h2>
+      <p>Celebrate love with themed décor, candlelight dinners, and personalized touches that create lifelong memories.</p>
+    </div>
+  </div>
+
+  <div id="pool" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('pool')">&times;</span>
+      <img src="Assets/pool party.jpg" alt="Pool Party">
+      <h2>Pool Parties</h2>
+      <p>Enjoy a vibrant poolside event with DJs, cocktails, floating décor, and games for all ages.</p>
+    </div>
+  </div>
+
+  <div id="dinner" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('dinner')">&times;</span>
+      <img src="Assets/private dinners.jpg" alt="Private Dinner">
+      <h2>Private Dinners</h2>
+      <p>Experience luxury dining with curated menus, themed settings, and elegant ambiance for a night to remember.</p>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <section class="section cta" data-aos="zoom-in">
+    <h2>Plan Your Perfect Private Party</h2>
+    <p>Whether it’s a birthday, anniversary, or just a night to remember, we’re here to make it magical.</p>
+    <a href="#contact" class="btn">Contact Us</a>
+  </section>
+
+   <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>EVENT PLANNER is a professional event management company dedicated to creating memorable experiences for all your special occasions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#" onclick="showEventModal('Wedding & Engagements')">Wedding & Engagements</a></li>
+                        <li><a href="#" onclick="showEventModal('Corporate & Galas')">Corporate & Galas</a></li>
+                        <li><a href="#" onclick="showEventModal('Private Parties')">Private Parties</a></li>
+                        <li><a href="#" onclick="showEventModal('Concerts')">Concerts</a></li>
+                        <li><a href="#" onclick="showEventModal('Cultural Events')">Cultural Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Event Street, City, Country</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@eventplanner.com</li>
+                        <li><i class="fas fa-clock"></i> Mon - Fri: 9AM to 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EVENT PLANNER. All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+    </footer>
+
+  <!-- AOS + Modal Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  </script>
+</body>
+</html>

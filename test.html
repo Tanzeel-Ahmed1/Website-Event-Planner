@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Custom Search API Test</title>
+</head>
+<body>
+  <input type="text" id="prompt" placeholder="Enter search term">
+  <button id="generateBtn">Search Image</button>
+  <div id="ai-result"></div>
+
+  <script>
+    const GOOGLE_API_KEY = "AIzaSyDfozvTfHJQ868oBXNPTAwZ-J_z9zESErM";
+    const GOOGLE_CX = "d42271867ccad450a";
+
+    document.getElementById("generateBtn").addEventListener("click", async () => {
+      const prompt = document.getElementById("prompt").value.trim();
+      const resultDiv = document.getElementById("ai-result");
+
+      if (!prompt) {
+        resultDiv.innerHTML = "<p>Please enter a search term.</p>";
+        return;
+      }
+
+      resultDiv.innerHTML = "<p>Searching...</p>";
+
+      const apiUrl = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(prompt)}&cx=${GOOGLE_CX}&key=${GOOGLE_API_KEY}&searchType=image&num=1`;
+
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        if (!data.items || data.items.length === 0) {
+          resultDiv.innerHTML = "<p>No image found.</p>";
+          return;
+        }
+
+        const imgUrl = data.items[0].link;
+        resultDiv.innerHTML = `<img src="${imgUrl}" alt="${prompt}" style="max-width:300px;border-radius:10px;">`;
+      } catch (error) {
+        console.error(error);
+        resultDiv.innerHTML = `<p style="color:red;">API error — check console.</p>`;
+      }
+    });
+  </script>
+</body>
+</html>

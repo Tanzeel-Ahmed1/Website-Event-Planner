@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weddings & Engagements | Ethnical Pirals</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="event.css">
+</head>
+<body>
+
+  <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-glass-cheers"></i>
+                <span>EVENT PLANNER</span>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="event.html">HOME</a></li>
+                    <li><a href="About 2.html">ABOUT US</a></li>
+                      <li class="dropdown">
+                        <a href="#">EVENTS <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="Weddings.html" onclick="showEventModal('Wedding & Engagements')">Wedding & Engagements</a>
+                            <a href="Corporate.html" onclick="showEventModal('Corporate & Galas')">Corporate </a>
+                            <a href="Privateparties.html" onclick="showEventModal('Private Parties')">Private Parties</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="gallery.html">GALLARY</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+  
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-down">
+    <h1>Weddings & Engagements</h1>
+    <p>Celebrate love with unforgettable moments & elegant celebrations</p>
+  </section>
+
+  <!-- Our Wedding Services -->
+  <section class="container" data-aos="fade-up">
+    <h2 class="section-title">Our Wedding Services</h2>
+    <div class="services-grid">
+      <div class="service-card" data-aos="zoom-in">
+        <i class="fas fa-ring"></i>
+        <h3>Engagement Planning</h3>
+        <p>From proposal ideas to engagement parties, we create beautiful beginnings.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fas fa-church"></i>
+        <h3>Wedding Ceremony</h3>
+        <p>Perfectly curated themes, décor, and coordination for your dream day.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-glass-cheers"></i>
+        <h3>Receptions</h3>
+        <p>Celebrate love with seamless receptions full of joy and elegance.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+        <i class="fas fa-music"></i>
+        <h3>Entertainment</h3>
+        <p>Live music, DJs, and cultural performances to keep the celebrations alive.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wedding Section -->
+  <section class="section" id="weddings">
+    <h2 data-aos="fade-up">Wedding Packages</h2>
+    <div class="cards-container">
+      <!-- Wedding Cards (8) -->
+      <div class="card" data-aos="zoom-in">
+        <img src="Assets/w package 1.jpg" alt="Wedding">
+        <div class="card-content">
+          <h3>Day Event decoration</h3>
+          <p>Elegant indoor banquet with floral decoration.</p>
+          <button class="btn" onclick="openModal('modal1')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="Assets/w package 2.jpg" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 2</h3>
+          <p>Luxury outdoor garden wedding with fairy lights.</p>
+          <button class="btn" onclick="openModal('modal2')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="Assets/w package 3.jpg" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 3</h3>
+          <p>Royal theme with grand stage & live music.</p>
+          <button class="btn" onclick="openModal('modal3')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="Assets/w package 4.jpg" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 4</h3>
+          <p>Beachside wedding with sunset ceremony.</p>
+          <button class="btn" onclick="openModal('modal4')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="Assets/w package 5.jpg" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 5</h3>
+          <p>Destination wedding with full travel support.</p>
+          <button class="btn" onclick="openModal('modal5')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="Assets/w package 6.jpg" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 6</h3>
+          <p>Traditional wedding with cultural performances.</p>
+          <button class="btn" onclick="openModal('modal6')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="Assets/w package 7.jpg" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 7</h3>
+          <p>Luxury banquet hall with premium catering.</p>
+          <button class="btn" onclick="openModal('modal7')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="Assets/w package 8.jpg" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 8</h3>
+          <p>Modern wedding theme with LED décor.</p>
+          <button class="btn" onclick="openModal('modal8')">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement Section -->
+  <section class="section" id="engagements">
+    <h2 data-aos="fade-up">Engagement Packages</h2>
+    <div class="cards-container">
+      <!-- Engagement Cards (8) -->
+      <div class="card" data-aos="zoom-in">
+        <img src="Assets/e package 1.jpg" alt="Engagement">
+        <div class="card-content">
+          <h3>Engagement Package 1</h3>
+          <p>Romantic indoor engagement with candlelight theme.</p>
+          <button class="btn" onclick="openModal('modal9')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="Assets/e package 2.jpg" alt="Engagement">
+        <div class="card-content">
+          <h3>Engagement Package 2</h3>
+          <p>Garden engagement with flower walls & photo booth.</p>
+          <button class="btn" onclick="openModal('modal10')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="Assets/e package 3.jpg" alt="Engagement">
+        <div class="card-content">
+          <h3>Engagement Package 3</h3>
+          <p>Luxury banquet with live music & dance floor.</p>
+          <button class="btn" onclick="openModal('modal11')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="Assets/e package 4.jpg" alt="Engagement">
+        <div class="card-content">
+          <h3>Engagement Package 4</h3>
+          <p>Minimalist pastel theme with soft lighting.</p>
+          <button class="btn" onclick="openModal('modal12')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="Assets/e package 5.jpg" alt="Engagement">
+        <div class="card-content">
+          <h3>Engagement Package 5</h3>
+          <p>Destination engagement with scenic backdrop.</p>
+          <button class="btn" onclick="openModal('modal13')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="Assets/e package 6.jpg" alt="Engagement">
+        <div class="card-content">
+          <h3>Engagement Package 6</h3>
+          <p>Outdoor lawn event with elegant stage & seating.</p>
+          <button class="btn" onclick="openModal('modal14')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="Assets/e package 7.jpg" alt="Engagement">
+        <div class="card-content">
+          <h3>Engagement Package 7</h3>
+          <p>Private engagement dinner with close family.</p>
+          <button class="btn" onclick="openModal('modal15')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="Assets/e package 8.jpg" alt="Engagement">
+        <div class="card-content">
+          <h3>Engagement Package 8</h3>
+          <p>Classy indoor setup with customized décor.</p>
+          <button class="btn" onclick="openModal('modal16')">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16 Modals (Wedding + Engagement) -->
+  <div id="modal1" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('modal1')">&times;</span><img src="https://images.unsplash.com/photo-1519741497674-611481863552"><h2>Wedding Package 1</h2><p>Full premium indoor banquet with stage, catering & decoration.</p></div></div>
+  <div id="modal2" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('modal2')">&times;</span><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773"><h2>Wedding Package 2</h2><p>Outdoor garden wedding with fairy lights, live music & photography.</p></div></div>
+  <!-- Similarly add details for modal3 to modal16 -->
+
+ 
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column" data-aos="fade-right">
+          <h3>About Us</h3>
+          <p>ETHNICAL PIRALS is a professional event management company dedicated to creating memorable experiences for all your special occasions.</p>
+        </div>
+        <div class="footer-column" data-aos="fade-up">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="event.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column" data-aos="fade-up" data-aos-delay="150">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="weddings.html">Wedding & Engagements</a></li>
+            <li><a href="#">Corporate & Galas</a></li>
+            <li><a href="#">Private Parties</a></li>
+            <li><a href="#">Concerts</a></li>
+            <li><a href="#">Cultural Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-column" data-aos="fade-left">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Event Street, City, Country</li>
+            <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+            <li><i class="fas fa-envelope"></i> info@ethnicalpirals.com</li>
+            <li><i class="fas fa-clock"></i> Mon - Fri: 9AM to 6PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" data-aos="fade-up">
+        <p>&copy; 2025 ETHNICAL PIRALS. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+    <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    function openModal(id){document.getElementById(id).style.display="flex";}
+    function closeModal(id){document.getElementById(id).style.display="none";}
+    window.onclick=function(e){document.querySelectorAll('.modal').forEach(m=>{if(e.target==m){m.style.display='none';}});}
+  </script>
+
+</body>
+</html>

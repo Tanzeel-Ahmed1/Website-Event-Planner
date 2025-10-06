@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Event Planner</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="event.css">
+</head>
+<body>
+
+  <!-- Header (same as event.html) -->
+  <header>
+    <div class="container header-container">
+      <div class="logo"><i class="fas fa-star"></i> Event Planner</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="event.html">Events</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you. Get in touch with us today!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form" data-aos="fade-right">
+          <h3>Send us a Message</h3>
+          <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Google Map -->
+        <div class="contact-map" data-aos="fade-left">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.8651778306497!2d67.01200437477764!3d24.801241147865844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33d9e5a1b4db7%3A0xd6cc0e5af4f6b1c9!2sKarachi!5e0!3m2!1sen!2s!4v1695890356785"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <section class="feedback-section">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Feedback & Ratings</h2>
+        <p>Your opinion matters! Rate our services and share your thoughts.</p>
+      </div>
+
+      <!-- Feedback Form -->
+      <div class="feedback-form" data-aos="zoom-in">
+        <form id="feedbackForm">
+          <input type="text" id="username" placeholder="Your Name" required>
+          <textarea id="comment" placeholder="Your Feedback" rows="3" required></textarea>
+          
+          <!-- Rating Stars -->
+          <div class="rating">
+            <input type="radio" name="star" id="star5" value="5"><label for="star5"><i class="fas fa-star"></i></label>
+            <input type="radio" name="star" id="star4" value="4"><label for="star4"><i class="fas fa-star"></i></label>
+            <input type="radio" name="star" id="star3" value="3"><label for="star3"><i class="fas fa-star"></i></label>
+            <input type="radio" name="star" id="star2" value="2"><label for="star2"><i class="fas fa-star"></i></label>
+            <input type="radio" name="star" id="star1" value="1"><label for="star1"><i class="fas fa-star"></i></label>
+          </div>
+
+          <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+      </div>
+
+      <!-- Previous Feedback -->
+      <div class="previous-feedback" data-aos="fade-up">
+        <h3>What People Say</h3>
+        <ul id="feedbackList">
+          <li><strong>Ali:</strong> ⭐⭐⭐⭐⭐ – Excellent event planning services!</li>
+          <li><strong>Sara:</strong> ⭐⭐⭐⭐ – Great support and very professional team.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>We specialize in event planning services with a personal touch.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="event.html">Events</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Event Planner. All Rights Reserved.</div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <!-- Feedback JS -->
+  <script>
+
+  const form = document.getElementById('feedbackForm');
+  const feedbackList = document.getElementById('feedbackList');
+
+  // Load saved feedback from localStorage
+  window.onload = function() {
+    const savedFeedback = JSON.parse(localStorage.getItem("feedbacks")) || [];
+    savedFeedback.forEach(item => {
+      const li = document.createElement('li');
+      li.innerHTML = `<strong>${item.name}:</strong> ${'⭐'.repeat(item.rating)} – ${item.comment}`;
+      feedbackList.prepend(li);
+    });
+  };
+
+  // Handle feedback form submit
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('username').value;
+    const comment = document.getElementById('comment').value;
+    const rating = document.querySelector('input[name="star"]:checked')?.value || 0;
+
+    if (name && comment && rating > 0) {
+      const li = document.createElement('li');
+      li.innerHTML = `<strong>${name}:</strong> ${'⭐'.repeat(rating)} – ${comment}`;
+      feedbackList.prepend(li);
+
+      // Save to localStorage
+      const savedFeedback = JSON.parse(localStorage.getItem("feedbacks")) || [];
+      savedFeedback.push({ name, comment, rating });
+      localStorage.setItem("feedbacks", JSON.stringify(savedFeedback));
+
+      form.reset();
+    } else {
+      alert("Please fill all fields and select a rating!");
+    }
+  });
+</script>
+
+
+   
+</body>
+</html>

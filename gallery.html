@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fas fa-glass-cheers"></i>
+        <span>EVENT PLANNER</span>
+      </div>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="event.html">HOME</a></li>
+          <li><a href="About 2.html">ABOUT US</a></li>
+          <li class="dropdown">
+            <a href="#">EVENTS <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+              <a href="Weddings.html" onclick="showEventModal('Wedding & Engagements')">Wedding & Engagements</a>
+              <a href="#" onclick="showEventModal('Corporate & Galas')">Corporate</a>
+              <a href="#" onclick="showEventModal('Private Parties')">Private Parties</a>
+            </div>
+          </li>
+          <li><a href="Services.html">SERVICES</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-down">
+    <h1>WELCOME TO OUR GALLERY</h1>
+    <p>Where every picture tells the story of unforgettable events.</p>
+  </section>
+
+  <!-- Gallery Section Title -->
+  <section class="gallery-title-section" data-aos="fade-up">
+    <h2 class="section-title">Our Gallery</h2>
+  </section>
+
+  <!-- Wedding Section -->
+  <section class="section" id="weddings">
+    <div class="cards-container">
+      <!-- Wedding Cards (8) -->
+      <div class="card" data-aos="zoom-in">
+        <img src="images/Gallery1.jpeg" alt="Wedding">
+        <div class="card-content">
+          <h3>Day Event Decoration</h3>
+          <p>Elegant indoor banquet with floral decoration.</p>
+          <button class="btn" onclick="openModal('modal1')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/gallery2.jpg" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 2</h3>
+          <p>Luxury outdoor garden wedding with fairy lights.</p>
+          <button class="btn" onclick="openModal('modal2')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="images/gallery3.jpg" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 3</h3>
+          <p>Royal theme with grand stage & live music.</p>
+          <button class="btn" onclick="openModal('modal3')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 4</h3>
+          <p>Beachside wedding with sunset ceremony.</p>
+          <button class="btn" onclick="openModal('modal4')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="images/gallery5.jpg" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 5</h3>
+          <p>Destination wedding with full travel support.</p>
+          <button class="btn" onclick="openModal('modal5')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="images/gallery6.jpg" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 6</h3>
+          <p>Traditional wedding with cultural performances.</p>
+          <button class="btn" onclick="openModal('modal6')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="images/gallery7.jpg" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 7</h3>
+          <p>Luxury banquet hall with premium catering.</p>
+          <button class="btn" onclick="openModal('modal7')">View Details</button>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Wedding">
+        <div class="card-content">
+          <h3>Wedding Package 8</h3>
+          <p>Modern wedding theme with LED décor.</p>
+          <button class="btn" onclick="openModal('modal8')">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Wedding Package 1">
+      <h2>Day Event Decoration</h2>
+      <p>Full premium indoor banquet with stage, catering & decoration. Our Day Event Decoration package includes elegant floral arrangements, custom lighting, and professional setup to create the perfect ambiance for your special day.</p>
+      <button class="btn" onclick="closeModal('modal1')">Close</button>
+    </div>
+  </div>
+  
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+      <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Wedding Package 2">
+      <h2>Wedding Package 2</h2>
+      <p>Outdoor garden wedding with fairy lights, live music & photography. This package includes a beautifully decorated garden venue, professional photography services, and live musical entertainment to make your wedding day truly magical.</p>
+      <button class="btn" onclick="closeModal('modal2')">Close</button>
+    </div>
+  </div>
+  
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+      <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Wedding Package 3">
+      <h2>Wedding Package 3</h2>
+      <p>Royal theme with grand stage & live music. Experience the luxury of a royal-themed wedding with our premium package that includes a grand stage setup, live orchestra, and exquisite decorations fit for royalty.</p>
+      <button class="btn" onclick="closeModal('modal3')">Close</button>
+    </div>
+  </div>
+  
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+      <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Wedding Package 4">
+      <h2>Wedding Package 4</h2>
+      <p>Beachside wedding with sunset ceremony. Say "I do" with the sound of waves and a beautiful sunset as your backdrop. This package includes beach setup, sunset ceremony coordination, and tropical-themed decorations.</p>
+      <button class="btn" onclick="closeModal('modal4')">Close</button>
+    </div>
+  </div>
+  
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Wedding Package 5">
+      <h2>Wedding Package 5</h2>
+      <p>Destination wedding with full travel support. Let us handle all the details of your dream destination wedding, including travel arrangements, accommodation, venue selection, and local coordination.</p>
+      <button class="btn" onclick="closeModal('modal5')">Close</button>
+    </div>
+  </div>
+  
+  <div id="modal6" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+      <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Wedding Package 6">
+      <h2>Wedding Package 6</h2>
+      <p>Traditional wedding with cultural performances. Celebrate your heritage with our traditional wedding package that includes cultural decorations, traditional music and dance performances, and authentic cuisine.</p>
+      <button class="btn" onclick="closeModal('modal6')">Close</button>
+    </div>
+  </div>
+  
+  <div id="modal7" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal7')">&times;</span>
+      <img src="https://images.unsplash.com/photo-1446669052213-5dcff53f1f3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Wedding Package 7">
+      <h2>Wedding Package 7</h2>
+      <p>Luxury banquet hall with premium catering. Host your wedding in style with our luxury banquet package that includes a premium venue, gourmet catering, and sophisticated decorations for an unforgettable celebration.</p>
+      <button class="btn" onclick="closeModal('modal7')">Close</button>
+    </div>
+  </div>
+  
+  <div id="modal8" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal8')">&times;</span>
+      <img src="images/gallery2.jpg" alt="Wedding Package 8">
+      <h2>Wedding Package 8</h2>
+      <p>Modern wedding theme with LED décor. For couples who love contemporary style, this package features modern LED lighting, sleek decorations, and a sophisticated atmosphere that reflects your modern taste.</p>
+      <button class="btn" onclick="closeModal('modal8')">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+      <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>EVENT PLANNER is a professional event management company dedicated to creating memorable experiences for all your special occasions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="event.html">Home</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="About 2.html">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="Weddings.html" onclick="showEventModal('Wedding & Engagements')">Wedding & Engagements</a></li>
+                        <li><a href="Corporate.html" onclick="showEventModal('Corporate & Galas')">Corporate & Galas</a></li>
+                        <li><a href="Privateparties.html" onclick="showEventModal('Private Parties')">Private Parties</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Event Street, City, Country</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@eventplanner.com</li>
+                        <li><i class="fas fa-clock"></i> Mon - Fri: 9AM to 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EVENT PLANNER. All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+    </footer>
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({ duration: 1000, once: true });
+    
+    // Modal functions
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+      document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+    }
+    
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+      document.body.style.overflow = "auto"; // Restore scrolling
+    }
+    
+    // Close modal when clicking outside
+    window.onclick = function(e) {
+      document.querySelectorAll('.modal').forEach(m => {
+        if (e.target == m) {
+          m.style.display = 'none';
+          document.body.style.overflow = "auto"; // Restore scrolling
+        }
+      });
+    }
+    
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelector('nav').classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
